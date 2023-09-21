@@ -1,0 +1,10 @@
+[package]
+name = "miden-benchmarking-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+miden_vm = { version = "0.5.0", package = "miden-vm", features = ["concurrent"]}
+serde = { version = "1", features = ["derive"] } # You only need this if you want app persistence
+serde_json = "1.0.48"
