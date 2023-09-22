@@ -12,7 +12,10 @@ $(CAIRO0_PROGRAMS_DIR)/%.json: $(CAIRO0_PROGRAMS_DIR)/%.cairo
 	@cairo-compile --cairo_path="$(CAIRO0_PROGRAMS_DIR)" $< --output $@ 2> /dev/null --proof_mode || \
 	docker run --rm -v $(ROOT_DIR)/$(CAIRO0_PROGRAMS_DIR):/pwd/$(CAIRO0_PROGRAMS_DIR) cairo --proof_mode /pwd/$< > $@
 
-bench: $(COMPILED_CAIRO0_PROGRAMS)
+risc0/fib/target/release/host:
+	cargo build --manifest-path risc0/fib/Cargo.toml --release
+
+bench: $(COMPILED_CAIRO0_PROGRAMS) risc0/fib/target/release/host
 	@echo -e "\n\nMMiden bench parallel\n"
 	@(cd miden/benchmarking-cli && cargo run --release -- -e fibonacci) 
 	@echo -e "\n\nMiden bench sequential\n"
