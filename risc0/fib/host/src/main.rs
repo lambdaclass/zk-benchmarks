@@ -21,7 +21,7 @@ fn main() {
     let prover = default_prover();
 
     // Produce a receipt by proving the specified ELF binary.
-    let receipt = prover.prove_elf(env, METHOD_NAME_ELF).unwrap();
+    let _receipt = prover.prove_elf(env, METHOD_NAME_ELF).unwrap();
 
     // TODO: Implement code for transmitting or serializing the receipt for
     // other parties to verify here

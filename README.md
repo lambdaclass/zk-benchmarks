@@ -1,3 +1,10 @@
-# Notes
+# Benchmarks of proving times od different ZK VMs
 
-Miden is running on 96 bit of security, and can be run with 128
+# Additional data
+
+Security is comparable between VMs. Currently:
+
+- Miden: 96 bits
+- Lambdaworks Platinum: 100 bits
+- Risc 0: 100 bits
+
