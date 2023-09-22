@@ -1,7 +1,7 @@
 # Elegant way to calculate the 1001st fibonacci number 
 
 begin
-    repeat.1000
+    repeat.1001
         swap 
         dup.1 
         add
