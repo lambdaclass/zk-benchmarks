@@ -1,6 +1,6 @@
 # Benchmarks of proving times od different ZK VMs
 
-# Additional data
+# Additional Data
 
 Security is comparable between VMs. Currently:
 
@@ -8,3 +8,10 @@ Security is comparable between VMs. Currently:
 - Lambdaworks Platinum: 100 bits
 - Risc 0: 100 bits
 
+# Requirements
+
+- Rust
+- Cairo Lang
+- Risc 0 deps (https://github.com/risc0/risc0)
+  - cargo install cargo-risczero
+  - cargo risczero install
