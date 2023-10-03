@@ -12,17 +12,26 @@ $(CAIRO0_PROGRAMS_DIR)/%.json: $(CAIRO0_PROGRAMS_DIR)/%.cairo
 	@cairo-compile --cairo_path="$(CAIRO0_PROGRAMS_DIR)" $< --output $@ 2> /dev/null --proof_mode || \
 	docker run --rm -v $(ROOT_DIR)/$(CAIRO0_PROGRAMS_DIR):/pwd/$(CAIRO0_PROGRAMS_DIR) cairo --proof_mode /pwd/$< > $@
 
+# fibonacci
 fib/risc0/target/release/host:
 	cargo build --manifest-path fib/risc0/Cargo.toml --release
 
 time_risc0_fib: fib/risc0/target/release/host
 	@time ./fib/risc0/target/release/host
 
+# blake2
 blake2/risc0/target/release/host:
 	cargo build --manifest-path blake2/risc0/Cargo.toml --release
 
 time_risc0_blake2: blake2/risc0/target/release/host
 	@time ./blake2/risc0/target/release/host
+
+# keccak
+keccak/risc0/target/release/host:
+	cargo build --manifest-path keccak/risc0/Cargo.toml --release
+
+time_risc0_keccak: keccak/risc0/target/release/host
+	@time ./keccak/risc0/target/release/host
 
 bench: $(COMPILED_CAIRO0_PROGRAMS) risc0/fib/target/release/host
 	@echo -e "\n\nMMiden bench parallel\n"
