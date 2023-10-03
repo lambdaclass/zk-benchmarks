@@ -4,25 +4,16 @@
 
 
 use risc0_zkvm::guest::env;
+use sha3::{Digest, Keccak256};
 
 risc0_zkvm::guest::entry!(main);
 pub fn main() {
-    // Load the first number from the host
-    let mut x0: u64 = 0;
-    // Load the second number from the host
-    let mut x1: u64 = 1;
-    let mut fib_acc: u64 = x0 + x1;
-    let mut n = 1000;
+    let mut hasher = Keccak256::new();
+    hasher.update(b"hello world");
+    let mut res = hasher.finalize();
 
-    loop {
-        x0 = x1;
-        x1 = fib_acc;
-        fib_acc = x0 + x1;
-        n = n - 1;
-        if n == 0 {
-            break
-        }
-    }
-
-    env::commit(&fib_acc);
+    // Truncate result to 250 bits to match 
+    // the starknet keccak result and make a fair comparison.
+    *res.first_mut().unwrap() &= 3;
+    env::commit(&res.as_slice());
 }
