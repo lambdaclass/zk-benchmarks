@@ -7,7 +7,7 @@ Security is comparable between VMs. Currently:
 - Miden: 96 bits
 - Lambdaworks Platinum: 100 bits
 - Risc0: 100 bits
-
+- Stone Prover: 100 bits
 # Requirements
 
 - Rust
