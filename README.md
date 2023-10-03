@@ -1,4 +1,4 @@
-# Benchmarks of proving times od different ZK VMs
+# Benchmarks of proving times of different ZK VMs
 
 # Additional Data
 
