@@ -4,8 +4,7 @@
         "fri": {
             "fri_step_list": [
                 0,
-                4,
-                4,
+		        1,
                 3
             ],
             "last_layer_degree_bound": 64,
