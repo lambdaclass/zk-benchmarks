@@ -8,9 +8,20 @@ use risc0_zkvm::guest::env;
 
 risc0_zkvm::guest::entry!(main);
 pub fn main() {
-    let mut hasher = Blake2s256::new();
-    hasher.update(b"hello world");
-    let res = hasher.finalize();
+    let mut i = 0;
 
-    env::commit(&res.as_slice());
+    loop {
+        let mut hasher = Blake2s256::new();
+        hasher.update(b"hello world");
+        let res = hasher.finalize();
+
+        env::commit(&res.as_slice());
+
+        i = i + 1;
+
+        if i < 10 {
+            break;
+        }
+
+    }
 }

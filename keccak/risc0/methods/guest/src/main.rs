@@ -8,12 +8,19 @@ use sha3::{Digest, Keccak256};
 
 risc0_zkvm::guest::entry!(main);
 pub fn main() {
-    let mut hasher = Keccak256::new();
-    hasher.update(b"hello world");
-    let mut res = hasher.finalize();
+    let mut i = 0;
 
-    // Truncate result to 250 bits to match 
-    // the starknet keccak result and make a fair comparison.
-    *res.first_mut().unwrap() &= 3;
-    env::commit(&res.as_slice());
+    loop {
+        let mut hasher = Keccak256::new();
+        hasher.update(b"hello world");
+        let res = hasher.finalize();
+    
+        env::commit(&res.as_slice());
+
+        i = i + 1;
+    
+        if i < 10 {
+            break;
+        }
+    }
 }
