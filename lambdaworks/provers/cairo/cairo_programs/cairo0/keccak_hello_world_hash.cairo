@@ -22,12 +22,12 @@ func hash_iterator{range_check_ptr: felt, bitwise_ptr: BitwiseBuiltin*}(iterator
     assert inputs[0] = 8031924123371070792;
     assert inputs[1] = 560229490;
 
-    let n_bytes = 16;
+    let n_bytes = 11;
 
     let (res: Uint256) = cairo_keccak{keccak_ptr=keccak_ptr}(inputs=inputs, n_bytes=n_bytes);
 
-    assert res.low = 293431514620200399776069983710520819074;
-    assert res.high = 317109767021952548743448767588473366791;
+    assert res.low = 40112351289573174314908494206008095690;
+    assert res.high = 255183024556386177481090493476769599923;
 
     finalize_keccak(keccak_ptr_start=keccak_ptr_start, keccak_ptr_end=keccak_ptr);
 
