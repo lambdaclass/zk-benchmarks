@@ -33,7 +33,7 @@ time_risc0_fib: fib/risc0/target/release/host
 
 time_risc0_fib90: fib90/risc0/target/release/host
 	@echo "Risc 0 fib 90 - Binary arithmetic"
-	@time ./fib/risc0/target/release/host
+	@time ./fib90/risc0/target/release/host
 	@echo -e "\n"
 
 time_stone_fib90: create_paths
