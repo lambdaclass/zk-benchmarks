@@ -25,3 +25,11 @@ pub fn main() {
 
     }
 }
+
+// pub fn main() { // program without loops
+//     let mut hasher = Blake2s256::new();
+//     hasher.update(b"hello world");
+//     let res = hasher.finalize();
+
+//     env::commit(&res.as_slice());
+// }
