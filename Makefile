@@ -12,9 +12,7 @@ $(CAIRO0_PROGRAMS_DIR)/%.json: $(CAIRO0_PROGRAMS_DIR)/%.cairo
 	@cairo-compile --cairo_path="$(CAIRO0_PROGRAMS_DIR)" $< --output $@ 2> /dev/null --proof_mode || \
 	docker run --rm -v $(ROOT_DIR)/$(CAIRO0_PROGRAMS_DIR):/pwd/$(CAIRO0_PROGRAMS_DIR) cairo --proof_mode /pwd/$< > $@
 
-bench_stone_risc:
-	time_risc0_fib
-	time_stone_fib
+bench_stone_risc: time_risc0_fib time_stone_fib
 
 create_paths:
 	@echo "{\"trace_path\": \"$(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_trace.json\",\"memory_path\": \"$(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_memory.json\"}" > $(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_looped_private_input.json
