@@ -96,3 +96,7 @@ The public input section itself is not checked.
 For example, the verifier does not check what CairoZero program is being proved,
 or that the builtins memory segments are of valid size.
 These things need to be checked externally.
+
+
+
+./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/fibonacci_1000/fibonacci_1000_looped_private_input.json --public_input_file=cairo_programs/fibonacci_1000/fibonacci_1000_looped_public_input.json --parameter_file=cairo_programs/fibonacci_1000/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json

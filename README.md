@@ -1,5 +1,11 @@
 # Benchmarks of proving times of different ZK VMs
 
+To run Stone vs Risc0 benchmarks use
+
+```make bench_stone_risc```
+
+Notice Stone only works in linux
+
 # Additional Data
 
 Security is comparable between VMs. Currently:
@@ -7,7 +13,7 @@ Security is comparable between VMs. Currently:
 - Miden: 96 bits
 - Lambdaworks Platinum: 100 bits
 - Risc0: 100 bits
-
+- Stone Prover: 100 bits
 # Requirements
 
 - Rust
