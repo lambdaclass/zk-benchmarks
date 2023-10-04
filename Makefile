@@ -17,6 +17,7 @@ bench_stone_risc: time_risc0_fib time_stone_fib
 create_paths:
 	@echo "{\"trace_path\": \"$(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_trace.json\",\"memory_path\": \"$(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_memory.json\"}" > $(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_looped_private_input.json
 
+# fibonacci
 fib/risc0/target/release/host:
 	cargo build --manifest-path fib/risc0/Cargo.toml --release
 
@@ -31,11 +32,19 @@ time_stone_fib: create_paths
 	@time ./fib/risc0/target/release/host
 	@echo -e "\n"
 
+# blake2
 blake2/risc0/target/release/host:
 	cargo build --manifest-path blake2/risc0/Cargo.toml --release
 
 time_risc0_blake2: blake2/risc0/target/release/host
 	@time ./blake2/risc0/target/release/host
+
+# keccak
+keccak/risc0/target/release/host:
+	cargo build --manifest-path keccak/risc0/Cargo.toml --release
+
+time_risc0_keccak: keccak/risc0/target/release/host
+	@time ./keccak/risc0/target/release/host
 
 bench: $(COMPILED_CAIRO0_PROGRAMS) risc0/fib/target/release/host
 	@echo -e "\n\nMMiden bench parallel\n"

@@ -1,5 +1,11 @@
 # Benchmarks of proving times of different ZK VMs
 
+To run Stone vs Risc0 benchmarks use
+
+```make bench_stone_risc```
+
+Notice Stone only works in linux
+
 # Additional Data
 
 Security is comparable between VMs. Currently:
