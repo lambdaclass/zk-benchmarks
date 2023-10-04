@@ -1,21 +1,15 @@
 {
     "attributes": [],
     "builtins": [],
-    "compiler_version": "0.11.0",
+    "compiler_version": "0.12.2",
     "data": [
-        "0x40780017fff7fff",
-        "0x0",
-        "0x1104800180018000",
-        "0x4",
-        "0x10780017fff7fff",
-        "0x0",
         "0x480680017fff8000",
         "0x0",
         "0x480680017fff8000",
         "0x1",
         "0x48307fff7ffe8000",
         "0x480680017fff8000",
-        "0x3e8",
+        "0x8",
         "0x48127ffd7fff8000",
         "0x48127ffd7fff8000",
         "0x48307fff7ffe8000",
@@ -24,88 +18,20 @@
         "0x20680017fff7fff",
         "0x800000000000010fffffffffffffffffffffffffffffffffffffffffffffffc",
         "0x400680017fff7ffe",
-        "0x7de71c861c90f47f776d261de1ebe62e6887220d774b08eb7c9f66d2e888c2",
+        "0x37",
         "0x208b7fff7fff7ffe"
     ],
     "debug_info": {
-        "file_contents": {
-            "<start>": "__start__:\nap += main.Args.SIZE + main.ImplicitArgs.SIZE;\ncall main;\n\n__end__:\njmp rel 0;\n"
-        },
+        "file_contents": {},
         "instruction_locations": {
             "0": {
-                "accessible_scopes": [
-                    "__main__"
-                ],
-                "flow_tracking_data": {
-                    "ap_tracking": {
-                        "group": 0,
-                        "offset": 0
-                    },
-                    "reference_ids": {}
-                },
-                "hints": [],
-                "inst": {
-                    "end_col": 46,
-                    "end_line": 2,
-                    "input_file": {
-                        "filename": "<start>"
-                    },
-                    "start_col": 1,
-                    "start_line": 2
-                }
-            },
-            "2": {
-                "accessible_scopes": [
-                    "__main__"
-                ],
-                "flow_tracking_data": {
-                    "ap_tracking": {
-                        "group": 0,
-                        "offset": 0
-                    },
-                    "reference_ids": {}
-                },
-                "hints": [],
-                "inst": {
-                    "end_col": 10,
-                    "end_line": 3,
-                    "input_file": {
-                        "filename": "<start>"
-                    },
-                    "start_col": 1,
-                    "start_line": 3
-                }
-            },
-            "4": {
-                "accessible_scopes": [
-                    "__main__"
-                ],
-                "flow_tracking_data": {
-                    "ap_tracking": {
-                        "group": 1,
-                        "offset": 0
-                    },
-                    "reference_ids": {}
-                },
-                "hints": [],
-                "inst": {
-                    "end_col": 10,
-                    "end_line": 6,
-                    "input_file": {
-                        "filename": "<start>"
-                    },
-                    "start_col": 1,
-                    "start_line": 6
-                }
-            },
-            "6": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 0
                     },
                     "reference_ids": {}
@@ -115,20 +41,20 @@
                     "end_col": 19,
                     "end_line": 8,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 18,
                     "start_line": 8
                 }
             },
-            "8": {
+            "2": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 1
                     },
                     "reference_ids": {
@@ -140,20 +66,20 @@
                     "end_col": 19,
                     "end_line": 9,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 18,
                     "start_line": 9
                 }
             },
-            "10": {
+            "4": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 2
                     },
                     "reference_ids": {
@@ -166,20 +92,20 @@
                     "end_col": 30,
                     "end_line": 10,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 23,
                     "start_line": 10
                 }
             },
-            "11": {
+            "5": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 3
                     },
                     "reference_ids": {
@@ -190,23 +116,23 @@
                 },
                 "hints": [],
                 "inst": {
-                    "end_col": 21,
+                    "end_col": 23,
                     "end_line": 11,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 17,
                     "start_line": 11
                 }
             },
-            "13": {
+            "7": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 4
                     },
                     "reference_ids": {
@@ -221,14 +147,14 @@
                     "end_col": 15,
                     "end_line": 9,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "parent_location": [
                         {
                             "end_col": 24,
                             "end_line": 13,
                             "input_file": {
-                                "filename": "fibonacci_1000_loop.cairo"
+                                "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                             },
                             "start_col": 22,
                             "start_line": 13
@@ -239,14 +165,14 @@
                     "start_line": 9
                 }
             },
-            "14": {
+            "8": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 5
                     },
                     "reference_ids": {
@@ -261,14 +187,14 @@
                     "end_col": 20,
                     "end_line": 10,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "parent_location": [
                         {
                             "end_col": 29,
                             "end_line": 14,
                             "input_file": {
-                                "filename": "fibonacci_1000_loop.cairo"
+                                "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                             },
                             "start_col": 22,
                             "start_line": 14
@@ -279,14 +205,14 @@
                     "start_line": 10
                 }
             },
-            "15": {
+            "9": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 6
                     },
                     "reference_ids": {
@@ -301,20 +227,20 @@
                     "end_col": 34,
                     "end_line": 15,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 27,
                     "start_line": 15
                 }
             },
-            "16": {
+            "10": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 7
                     },
                     "reference_ids": {
@@ -329,20 +255,20 @@
                     "end_col": 26,
                     "end_line": 16,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 21,
                     "start_line": 16
                 }
             },
-            "18": {
+            "12": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 8
                     },
                     "reference_ids": {
@@ -357,20 +283,20 @@
                     "end_col": 27,
                     "end_line": 17,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 9,
                     "start_line": 17
                 }
             },
-            "20": {
+            "14": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 8
                     },
                     "reference_ids": {
@@ -382,23 +308,23 @@
                 },
                 "hints": [],
                 "inst": {
-                    "end_col": 98,
+                    "end_col": 25,
                     "end_line": 19,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 5,
                     "start_line": 19
                 }
             },
-            "22": {
+            "16": {
                 "accessible_scopes": [
                     "__main__",
                     "__main__.main"
                 ],
                 "flow_tracking_data": {
                     "ap_tracking": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 8
                     },
                     "reference_ids": {
@@ -413,7 +339,7 @@
                     "end_col": 15,
                     "end_line": 20,
                     "input_file": {
-                        "filename": "fibonacci_1000_loop.cairo"
+                        "filename": "cairo_programs/fibonacci_10/fibonacci_10_loop.cairo"
                     },
                     "start_col": 5,
                     "start_line": 20
@@ -423,17 +349,9 @@
     },
     "hints": {},
     "identifiers": {
-        "__main__.__end__": {
-            "pc": 4,
-            "type": "label"
-        },
-        "__main__.__start__": {
-            "pc": 0,
-            "type": "label"
-        },
         "__main__.main": {
             "decorators": [],
-            "pc": 6,
+            "pc": 0,
             "type": "function"
         },
         "__main__.main.Args": {
@@ -462,25 +380,25 @@
             "references": [
                 {
                     "ap_tracking_data": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 3
                     },
-                    "pc": 11,
+                    "pc": 5,
                     "value": "[cast(ap + (-1), felt*)]"
                 },
                 {
                     "ap_tracking_data": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 7
                     },
-                    "pc": 16,
+                    "pc": 10,
                     "value": "[cast(ap + (-1), felt*)]"
                 }
             ],
             "type": "reference"
         },
         "__main__.main.loop": {
-            "pc": 13,
+            "pc": 7,
             "type": "label"
         },
         "__main__.main.n": {
@@ -489,18 +407,18 @@
             "references": [
                 {
                     "ap_tracking_data": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 4
                     },
-                    "pc": 13,
+                    "pc": 7,
                     "value": "[cast(ap + (-1), felt*)]"
                 },
                 {
                     "ap_tracking_data": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 8
                     },
-                    "pc": 18,
+                    "pc": 12,
                     "value": "[cast(ap + (-1), felt*)]"
                 }
             ],
@@ -512,18 +430,18 @@
             "references": [
                 {
                     "ap_tracking_data": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 1
                     },
-                    "pc": 8,
+                    "pc": 2,
                     "value": "[cast(ap + (-1), felt*)]"
                 },
                 {
                     "ap_tracking_data": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 5
                     },
-                    "pc": 14,
+                    "pc": 8,
                     "value": "[cast(ap + (-1), felt*)]"
                 }
             ],
@@ -535,18 +453,18 @@
             "references": [
                 {
                     "ap_tracking_data": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 2
                     },
-                    "pc": 10,
+                    "pc": 4,
                     "value": "[cast(ap + (-1), felt*)]"
                 },
                 {
                     "ap_tracking_data": {
-                        "group": 2,
+                        "group": 0,
                         "offset": 6
                     },
-                    "pc": 15,
+                    "pc": 9,
                     "value": "[cast(ap + (-1), felt*)]"
                 }
             ],
@@ -559,66 +477,66 @@
         "references": [
             {
                 "ap_tracking_data": {
-                    "group": 2,
+                    "group": 0,
                     "offset": 1
+                },
+                "pc": 2,
+                "value": "[cast(ap + (-1), felt*)]"
+            },
+            {
+                "ap_tracking_data": {
+                    "group": 0,
+                    "offset": 2
+                },
+                "pc": 4,
+                "value": "[cast(ap + (-1), felt*)]"
+            },
+            {
+                "ap_tracking_data": {
+                    "group": 0,
+                    "offset": 3
+                },
+                "pc": 5,
+                "value": "[cast(ap + (-1), felt*)]"
+            },
+            {
+                "ap_tracking_data": {
+                    "group": 0,
+                    "offset": 4
+                },
+                "pc": 7,
+                "value": "[cast(ap + (-1), felt*)]"
+            },
+            {
+                "ap_tracking_data": {
+                    "group": 0,
+                    "offset": 5
                 },
                 "pc": 8,
                 "value": "[cast(ap + (-1), felt*)]"
             },
             {
                 "ap_tracking_data": {
-                    "group": 2,
-                    "offset": 2
+                    "group": 0,
+                    "offset": 6
+                },
+                "pc": 9,
+                "value": "[cast(ap + (-1), felt*)]"
+            },
+            {
+                "ap_tracking_data": {
+                    "group": 0,
+                    "offset": 7
                 },
                 "pc": 10,
                 "value": "[cast(ap + (-1), felt*)]"
             },
             {
                 "ap_tracking_data": {
-                    "group": 2,
-                    "offset": 3
-                },
-                "pc": 11,
-                "value": "[cast(ap + (-1), felt*)]"
-            },
-            {
-                "ap_tracking_data": {
-                    "group": 2,
-                    "offset": 4
-                },
-                "pc": 13,
-                "value": "[cast(ap + (-1), felt*)]"
-            },
-            {
-                "ap_tracking_data": {
-                    "group": 2,
-                    "offset": 5
-                },
-                "pc": 14,
-                "value": "[cast(ap + (-1), felt*)]"
-            },
-            {
-                "ap_tracking_data": {
-                    "group": 2,
-                    "offset": 6
-                },
-                "pc": 15,
-                "value": "[cast(ap + (-1), felt*)]"
-            },
-            {
-                "ap_tracking_data": {
-                    "group": 2,
-                    "offset": 7
-                },
-                "pc": 16,
-                "value": "[cast(ap + (-1), felt*)]"
-            },
-            {
-                "ap_tracking_data": {
-                    "group": 2,
+                    "group": 0,
                     "offset": 8
                 },
-                "pc": 18,
+                "pc": 12,
                 "value": "[cast(ap + (-1), felt*)]"
             }
         ]
