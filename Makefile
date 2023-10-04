@@ -23,13 +23,13 @@ fib/risc0/target/release/host:
 time_risc0_fib: fib/risc0/target/release/host
 	@echo "Risc 0 time"
 	@time ./fib/risc0/target/release/host
-	@echo "\n"
+	@echo -e "\n"
 
 time_stone_fib: create_paths
 	@echo "Stone fib 1000 time - Layout plain"
 	time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/fibonacci_1000/fibonacci_1000_looped_private_input.json --public_input_file=cairo_programs/fibonacci_1000/fibonacci_1000_looped_public_input.json --parameter_file=cairo_programs/fibonacci_1000/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
 	@time ./fib/risc0/target/release/host
-	@echo "\n"
+	@echo -e "\n"
 
 blake2/risc0/target/release/host:
 	cargo build --manifest-path blake2/risc0/Cargo.toml --release
