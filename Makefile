@@ -13,7 +13,7 @@ $(CAIRO0_PROGRAMS_DIR)/%.json: $(CAIRO0_PROGRAMS_DIR)/%.cairo
 	docker run --rm -v $(ROOT_DIR)/$(CAIRO0_PROGRAMS_DIR):/pwd/$(CAIRO0_PROGRAMS_DIR) cairo --proof_mode /pwd/$< > $@
 
 create_paths:
-	echo "{\"trace_path\": \"$(pwd)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_trace.json\",\"memory_path\": \"$(pwd)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_memory.json\"}" > $(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_looped_private_input.json
+	echo "{\"trace_path\": \"$(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_trace.json\",\"memory_path\": \"$(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_memory.json\"}" > $(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_looped_private_input.json
 
 fib/risc0/target/release/host:
 	cargo build --manifest-path fib/risc0/Cargo.toml --release
