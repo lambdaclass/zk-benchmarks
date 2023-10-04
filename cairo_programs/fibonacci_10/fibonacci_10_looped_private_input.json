@@ -1,7 +1,4 @@
 {
     "trace_path": "/Users/peter/repos/zk-benchmarks/cairo_programs/fibonacci_10/fibonacci_10_loop_trace.json",
-    "memory_path": "/Users/peter/repos/zk-benchmarks/cairo_programs/fibonacci_10/fibonacci_10_loop_memory.json",
-    "pedersen": [],
-    "range_check": [],
-    "ecdsa": []
+    "memory_path": "/Users/peter/repos/zk-benchmarks/cairo_programs/fibonacci_10/fibonacci_10_loop_memory.json"
 }

@@ -1,8 +1,8 @@
 {
-    "layout": "small",
+    "layout": "plain",
     "rc_min": 32764,
     "rc_max": 32769,
-    "n_steps": 512,
+    "n_steps": 64,
     "memory_segments": {
         "program": {
             "begin_addr": 1,
@@ -11,22 +11,6 @@
         "execution": {
             "begin_addr": 26,
             "stop_ptr": 64
-        },
-        "output": {
-            "begin_addr": 64,
-            "stop_ptr": 64
-        },
-        "pedersen": {
-            "begin_addr": 64,
-            "stop_ptr": 64
-        },
-        "range_check": {
-            "begin_addr": 256,
-            "stop_ptr": 256
-        },
-        "ecdsa": {
-            "begin_addr": 320,
-            "stop_ptr": 320
         }
     },
     "public_memory": [
