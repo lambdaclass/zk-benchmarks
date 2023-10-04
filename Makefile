@@ -16,6 +16,7 @@ bench_stone_risc: time_risc0_fib time_stone_fib
 
 create_paths:
 	@echo "{\"trace_path\": \"$(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_trace.json\",\"memory_path\": \"$(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_loop_memory.json\"}" > $(PWD)/cairo_programs/fibonacci_1000/fibonacci_1000_looped_private_input.json
+	@echo "{\"trace_path\": \"$(PWD)/cairo_programs/blake2s/blake2s_10_times.json\",\"memory_path\": \"$(PWD)/cairo_programs/blake2s/blak2s_10_times.json\"}" > $(PWD)/cairo_programs/blak2s/blake2s_10_times_private_input.json
 
 # fibonacci
 fib/risc0/target/release/host:
