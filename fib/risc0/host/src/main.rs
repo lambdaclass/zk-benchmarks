@@ -21,7 +21,11 @@ fn main() {
     let prover = default_prover();
 
     // Produce a receipt by proving the specified ELF binary.
-    let _receipt = prover.prove_elf(env, METHOD_NAME_ELF).unwrap();
+    let receipt = prover.prove_elf(env, METHOD_NAME_ELF).unwrap();
+
+    // print the result
+    let result: [u8; 4] = receipt.journal.clone().try_into().unwrap(); 
+    dbg!(u32::from_le_bytes(result));
 
     // TODO: Implement code for transmitting or serializing the receipt for
     // other parties to verify here

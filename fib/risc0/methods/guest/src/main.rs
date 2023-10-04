@@ -8,7 +8,7 @@ risc0_zkvm::guest::entry!(main);
 pub fn main() {
     let mut x0: u32 = 0;
     let mut x1: u32 = 1;
-    let mut fib_acc: u32 = x0 + x1;
+    let mut fib_acc: u32 = 0;
     let mut n = 10;
 
     loop {
