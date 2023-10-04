@@ -46,12 +46,12 @@ keccak/risc0/target/release/host:
 time_risc0_keccak: keccak/risc0/target/release/host
 	@time ./keccak/risc0/target/release/host
 
-bench: $(COMPILED_CAIRO0_PROGRAMS) risc0/fib/target/release/host
+bench: $(COMPILED_CAIRO0_PROGRAMS) fib/risc0/target/release/host
 	@echo -e "\n\nMMiden bench parallel\n"
 	@(cd miden/benchmarking-cli && cargo run --release -- -e fibonacci) 
 	@echo -e "\n\nMiden bench sequential\n"
 	@(cd miden/benchmarking-cli && RAYON_NUM_THREADS=1 cargo run --release -- -e fibonacci)
 	@echo -e "\n\nRisc Zero bench sequential\n"
-	@(time RAYON_NUM_THREADS=1 ./risc0/fib/target/release/host)
+	@(time RAYON_NUM_THREADS=1 ./fib/risc0/target/release/host)
 	@echo -e "\n\nRisc Zero bench parallel\n"
-	@time ./risc0/fib/target/release/host
+	@time ./fib/risc0/target/release/host
