@@ -22,7 +22,7 @@ create_paths:
 fib/risc0/target/release/host:
 	cargo build --manifest-path fib/risc0/Cargo.toml --release
 
-fib/risc0/target/release/host:
+fib90/risc0/target/release/host:
 	cargo build --manifest-path fib90/risc0/Cargo.toml --release
 
 
