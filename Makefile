@@ -22,6 +22,10 @@ create_paths:
 fib/risc0/target/release/host:
 	cargo build --manifest-path fib/risc0/Cargo.toml --release
 
+fib/risc0/target/release/host:
+	cargo build --manifest-path fib90/risc0/Cargo.toml --release
+
+
 time_risc0_fib: fib/risc0/target/release/host
 	@echo "Risc 0 fib 10 - Binary arithmetic"
 	@time ./fib/risc0/target/release/host
