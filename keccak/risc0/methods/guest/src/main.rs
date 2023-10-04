@@ -13,12 +13,8 @@ pub fn main() {
     loop {
         let mut hasher = Keccak256::new();
         hasher.update(b"hello world");
-        let mut res = hasher.finalize();
+        let res = hasher.finalize();
     
-        // Truncate result to 250 bits to match 
-        // the starknet keccak result and make a fair comparison.
-        *res.first_mut().unwrap() &= 3;
-
         env::commit(&res.as_slice());
 
         i = i + 1;
