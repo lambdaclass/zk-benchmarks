@@ -24,13 +24,14 @@ pub fn main() { // program without loops
 
     let res : [u32; 8] = [u32::from_be_bytes(arr1), u32::from_be_bytes(arr2), u32::from_be_bytes(arr3), u32::from_be_bytes(arr4), u32::from_be_bytes(arr5), u32::from_be_bytes(arr6), u32::from_be_bytes(arr7), u32::from_be_bytes(arr8)];
 
+    env::commit(&res);
+
     let mut hasher = Blake2s256::new();
     hasher.update(b"B");
-    let res = hasher.finalize();
+    let _res = hasher.finalize();
 
     let mut hasher = Blake2s256::new();
     hasher.update(b"C");
-    let res = hasher.finalize();
+    let _res = hasher.finalize();
 
-    env::commit(&res);
 }
