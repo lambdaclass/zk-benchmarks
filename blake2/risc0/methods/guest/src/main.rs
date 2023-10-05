@@ -22,7 +22,16 @@ pub fn main() { // program without loops
     let arr7 : [u8; 4] = res[24..28].try_into().unwrap();
     let arr8 : [u8; 4] = res[28..32].try_into().unwrap();
 
-    let res : [u32; 8] = [u32::from_be_bytes(arr1), u32::from_be_bytes(arr2), u32::from_be_bytes(arr3), u32::from_be_bytes(arr4), u32::from_be_bytes(arr5), u32::from_be_bytes(arr6), u32::from_be_bytes(arr7), u32::from_be_bytes(arr8)];
+    let res : [u32; 8] = [
+        u32::from_be_bytes(arr1),
+        u32::from_be_bytes(arr2),
+        u32::from_be_bytes(arr3), 
+        u32::from_be_bytes(arr4), 
+        u32::from_be_bytes(arr5), 
+        u32::from_be_bytes(arr6), 
+        u32::from_be_bytes(arr7), 
+        u32::from_be_bytes(arr8),
+    ];
 
     env::commit(&res);
 

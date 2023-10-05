@@ -16,13 +16,14 @@ bench_stone_risc: time_risc0_fib time_stone_fib
 
 create_paths:
 	@echo "{\"trace_path\": \"$(PWD)/cairo_programs/fibonacci_10/fibonacci_10_loop_trace.json\",\"memory_path\": \"$(PWD)/cairo_programs/fibonacci_10/fibonacci_10_loop_memory.json\"}" > $(PWD)/cairo_programs/fibonacci_10/fibonacci_10_looped_private_input.json
+	@echo "{\"trace_path\": \"$(PWD)/cairo_programs/blake2/blake2_trace.json\",\"memory_path\": \"$(PWD)/cairo_programs/blake2/blake2_memory.json\"}" > $(PWD)/cairo_programs/blake2/blake2_private_input.json
 
-# fibonacci
+# Fibonacci benches
 fib/risc0/target/release/host:
 	cargo build --manifest-path fib/risc0/Cargo.toml --release
 
 time_risc0_fib: fib/risc0/target/release/host
-	@echo "Risc 0 fib 10 - Binary arithmetic"
+	@echo "Risc0 fib 10 - Binary arithmetic"
 	@time ./fib/risc0/target/release/host
 	@echo -e "\n"
 
@@ -31,12 +32,19 @@ time_stone_fib: create_paths
 	@time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/fibonacci_10/fibonacci_10_looped_private_input.json --public_input_file=cairo_programs/fibonacci_10/fibonacci_10_looped_public_input.json --parameter_file=cairo_programs/fibonacci_10/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
 	@echo -e "\n"
 
-# blake2
+# Blake2s benches 
 blake2/risc0/target/release/host:
 	cargo build --manifest-path blake2/risc0/Cargo.toml --release
 
 time_risc0_blake2: blake2/risc0/target/release/host
+	@echo "Risc0 - Blake2s"
 	@time ./blake2/risc0/target/release/host
+	@echo -e "\n"
+
+time_stone_blake2: create_paths
+	@echo "Stone fib 10 - Layout plain - Native field arithmetic"
+	@time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/fibonacci_10/fibonacci_10_looped_private_input.json --public_input_file=cairo_programs/fibonacci_10/fibonacci_10_looped_public_input.json --parameter_file=cairo_programs/fibonacci_10/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
+	@echo -e "\n"
 
 # keccak
 keccak/risc0/target/release/host:
