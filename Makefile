@@ -42,8 +42,8 @@ time_risc0_blake2: blake2/risc0/target/release/host
 	@echo -e "\n"
 
 time_stone_blake2: create_paths
-	@echo "Stone fib 10 - Layout plain - Native field arithmetic"
-	@time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/fibonacci_10/fibonacci_10_looped_private_input.json --public_input_file=cairo_programs/fibonacci_10/fibonacci_10_looped_public_input.json --parameter_file=cairo_programs/fibonacci_10/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
+	@echo "Stone blake2s - Layout starknet - Native field arithmetic"
+	@time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/blake2/blake2_private_input.json --public_input_file=cairo_programs/blake2/blake2_public_input.json --parameter_file=cairo_programs/blake2/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
 	@echo -e "\n"
 
 # keccak
