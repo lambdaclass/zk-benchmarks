@@ -66,7 +66,7 @@ time_risc0_blake2: blake2/risc0/target/release/host
 
 time_stone_blake2: cairo_run_blake2s
 	@echo "Stone blake2s - Layout starknet - Native field arithmetic"
-	@time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/blake2s/blake2_private_input.json --public_input_file=cairo_programs/blake2s/blake2s_public_input.json --parameter_file=cairo_programs/blake2s/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
+	@time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/blake2s/blake2s_private_input.json --public_input_file=cairo_programs/blake2s/blake2s_public_input.json --parameter_file=cairo_programs/blake2s/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
 	@echo -e "\n"
 
 # keccak
