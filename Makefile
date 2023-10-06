@@ -12,6 +12,18 @@ $(CAIRO0_PROGRAMS_DIR)/%.json: $(CAIRO0_PROGRAMS_DIR)/%.cairo
 	@cairo-compile --cairo_path="$(CAIRO0_PROGRAMS_DIR)" $< --output $@ 2> /dev/null --proof_mode || \
 	docker run --rm -v $(ROOT_DIR)/$(CAIRO0_PROGRAMS_DIR):/pwd/$(CAIRO0_PROGRAMS_DIR) cairo --proof_mode /pwd/$< > $@
 
+deps:
+	pyenv install -s 3.9.15
+	PYENV_VERSION=3.9.15 python -m venv cairo_venv
+	. cairo_venv/bin/activate ; \
+	pip install -r requirements.txt ; \
+
+deps-macos:
+	pyenv install -s 3.9.15
+	PYENV_VERSION=3.9.15 python -m venv cairo_venv 
+	. cairo_venv/bin/activate ; \
+	CFLAGS=-I/opt/homebrew/opt/gmp/include LDFLAGS=-L/opt/homebrew/opt/gmp/lib pip install -r requirements.txt ; \
+
 bench_stone_risc: time_risc0_fib time_stone_fib time_risc0_blake2 time_stone_blake2
 
 create_paths:
