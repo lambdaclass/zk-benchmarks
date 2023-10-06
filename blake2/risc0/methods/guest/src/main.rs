@@ -35,12 +35,12 @@ pub fn main() { // program without loops
 
     env::commit(&res);
 
-    let mut hasher = Blake2s256::new();
-    hasher.update(b"B");
-    let _res = hasher.finalize();
+    // let mut hasher = Blake2s256::new();
+    // hasher.update(b"B");
+    // let _res = hasher.finalize();
 
-    let mut hasher = Blake2s256::new();
-    hasher.update(b"C");
-    let _res = hasher.finalize();
+    // let mut hasher = Blake2s256::new();
+    // hasher.update(b"C");
+    // let _res = hasher.finalize();
 
 }
