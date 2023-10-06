@@ -1,10 +1,18 @@
 # Benchmarks of proving times of different ZK VMs
 
-To run Stone vs Risc0 benchmarks use
+To run Stone vs Risc0 benchmarks, first make sure to activate your Cairo Python environment:
 
-```make bench_stone_risc```
+```
+source <cairo_venv_path>/bin/activate
+```
 
-Notice Stone only works in linux
+and then run
+
+```
+make bench_stone_risc
+```
+
+**Note**: The Stone prover only works in linux.
 
 # Additional Data
 
