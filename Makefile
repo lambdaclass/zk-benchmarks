@@ -62,7 +62,7 @@ time_risc0_fib: fib/risc0/target/release/host
 	@echo -e "\n"
 
 time_stone_fib: cairo_run_fibonacci_10 
-	@echo "\n"
+	@echo -e "\n"
 	@echo "Stone fib 10 - Layout plain - Native field arithmetic"
 	@time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/fibonacci_10/fibonacci_10_looped_private_input.json --public_input_file=cairo_programs/fibonacci_10/fibonacci_10_looped_public_input.json --parameter_file=cairo_programs/fibonacci_10/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
 	@echo -e "\n"
@@ -77,7 +77,7 @@ time_risc0_blake2: blake2/risc0/target/release/host
 	@echo -e "\n"
 
 time_stone_blake2: cairo_run_blake2s
-	@echo "\n"
+	@echo -e "\n"
 	@echo "Stone blake2s - Layout starknet"
 	@time ./stone-prover/cpu_air_prover --out_file=proof.proof --private_input_file=cairo_programs/blake2s/blake2s_private_input.json --public_input_file=cairo_programs/blake2s/blake2s_public_input.json --parameter_file=cairo_programs/blake2s/cpu_air_params.json --prover_config_file=stone-prover/e2e_test/cpu_air_prover_config.json
 	@echo -e "\n"
